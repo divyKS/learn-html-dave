@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Eren Yeager" />
+    <meta name="description" content="This is all my learnings from the HTML tutorial!"/>
+    <title>HTML Revision</title>
+    <!--below is how to add the icon to the tab of the window-->
+    <link rel="icon" href="html5.png" type="image/x-icon" />
+    <link rel="stylesheet" href="main.css">
+  </head>
+
+  <body>
+    <!--we can have multiple header-->
+    <header>
+      <h1>Hello World!</h1>
+      <p>This is called internal linking, nav tag has been used</p>
+      <!--aria-labelledby attribute of nav along with id in h2 below it-->
+      <nav aria-label="primary-navigation">
+        <!-- <h2 id="primary-navigation">Primary Nav bar</h2> -->
+        <ul>
+          <li><a href="#firstSection">HTML Section</a></li>
+          <li><a href="#secondSection">CSS Section</a></li>
+          <li><a href="#contactSection">Conact Me</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <hr />
+
+    <p>I am a paragraph.</p>
+    <!--h1,2,... tags have semantic meaning, so keep h1 as main heading, h2 as sub headings and h3 as futher sub topics-->
+
+    <hr />
+
+    <!-- there can be only one main tag per page-->
+    <main>
+      <!--instead of section, we can use article, their difference is not mch clearly defined, so we can use it like if the things are clearly defined we can use it as arcticle if it is more of general information then we can use section-->
+      <section id="firstSection">
+        <h2>I am revising HTML!</h2>
+        <p>I like this tutorial as of now.</p>
+
+        <h3>I am revising HTML!</h3>
+        <p>
+          I like this tutorial as of now. 
+          <br />
+          ...<strong>Whitespaces are collpased in html</strong> 
+          <br />
+          ...so we can use like br tag to create a new line 
+          <br />
+          hr elements also have semantic meaning, that the content of the page is changing, or some
+          different topics exits
+        </p>
+      </section>
+
+      <hr />
+
+      <!--em is emphasis, strong tag also emphasises and again gives semantic meaning to SEO etc., they are not used for bolding or italisizing but for SEO etc.-->
+      <section id="secondSection">
+
+        <h2>I will study <em>CSS</em> after this!</h2>
+        <p>I am pumped for that project at the end.</p>
+
+      </section>
+
+    </main>
+
+    <h3>I am revising HTML!</h3>
+    <p>I like this tutorial as of now.</p>
+
+    <hr />
+
+    <p>
+      What we are seeing now is block level elements, when added they start from
+      a new line.
+    </p>
+
+    <p>The inline elements like strong tag , em tag start from there only</p>
+
+    <hr />
+
+    <h3>HTML Entities</h3>
+    <p>
+      They start with & sign <br />for a white space we use nbsp; as many
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; times as needed <br />&lt;&lt;&lt;&copy;<a
+        href="about.html"
+        >It's Me</a
+      >
+      &gt;&gt;&gt;
+    </p>
+    <hr />
+    <h3>Abbreviation Tag</h3>
+    <p>
+      It works when cursor is placed on it. But it is not available to all
+      technologies, so avoid putting any important information inside of it. I
+      study <abbr title="Computer Science & Engineering">CSE</abbr>
+    </p>
+    <hr />
+    <h3>To add address we use its tag</h3>
+    <address>
+      34-I<br />
+      Ram Setu Colony<br />
+      Harkirant Nagar<br />
+      Shyam Lok, Hyderabad.
+    </address>
+    <hr />
+    <h3>Lists</h3>
+    <p>
+      Lists don't create any extra space between items, it can be created by eg.
+      p tags inside li tag. And these lists have a little space to their left by
+      default.
+    </p>
+    <p>I like these fruits:</p>
+    <ol>
+      <li>Banana</li>
+      <li>Mango</li>
+      <li>Grapes</li>
+    </ol>
+    <p>I like these drinks:</p>
+    <ul>
+      <li>Coffee</li>
+      <li>Cold Coffee</li>
+      <li>Tea</li>
+    </ul>
+    <p>
+      These are some cold places, better avoid visiting them. description lists
+      start from very left. The dt tag description term starts from very left,
+      but dd tag description details start from some space right from the left.
+      There is no space between then however.
+    </p>
+    <dl>
+      <dt>North Pole</dt>
+      <dd>Its cold.</dd>
+      <dt>South Pole.</dt>
+      <dd>Its even more cold.</dd>
+      <dt>Mountain tops.</dt>
+      <dd>They have been cold since ages.</dd>
+    </dl>
+    <hr />
+    <h3>Anchor Tags</h3>
+    <p>
+      If we provide the whole address of the web it is absolute reference. It we
+      provided location on out system it is relative reference.
+      <br />
+      <abbr title="Frontend-Development Roadmap">
+        <a
+          href="https://github.com/WeMakeDevs/roadmaps/tree/main/Frontend-Development"
+          >FEDR</a
+        >
+      </abbr>
+    </p>
+    <p>
+      <a href="#">Go back to top! xD</a>
+    </p>
+    <hr />
+    <h3>Types of links:</h3>
+    <ul>
+      <li>
+        DOWNLOAD LINK : DOWNLOAD <a href="html5.png" download>HTML5</a> icon.
+      </li>
+      <li>
+        email link: a thing of past, not to be done like this, web spiders
+        harvest these, use forms instead now.
+        <br />
+        Contact me <a href="mailto:random@random.com">here</a>.
+      </li>
+      <li>telephone link : call me <a href="tel:+1234567890">at</a></li>
+      <li>
+        simple open in new tab :
+        <a href="https://www.google.com/" target="_blank">Google</a>
+      </li>
+      <li>
+        to take us back to be index page the index.html page :
+        <a href="/">Back to home</a>
+      </li>
+    </ul>
+    <hr />
+
+
+    <h3>Images</h3>
+    <p>
+      if only width is mentioned in img tag then height is adjusted automatically to maintain the same aspect ratio of the original image, but
+      css values can override these
+    </p>
+    <p>
+      we are now again come to writing width and height, so that if due to some pop up or something else the location of item we wished to clicked on
+      doesn't change <b>cumulative layout shift</b>
+    </p>
+
+    <img src="img/html_logo_300x300.png" alt="HTML 5 Logo Image" title="I am revising HTML" width="150" height="150"
+    />
+    <p>
+      we add the loading attribute, it is eager by default, we can set it to
+      lazy to improve perforamce, then it loads the image only when it is about
+      to be seen, since not all images of the webpage can be seen right away, we
+      need to scroll too
+    </p>
+   
+    <figure>
+      <img src="img/caribbean.jpg" alt="beach image" loading="lazy" width="400" height="225" />
+      <figcaption>
+        This is a caption to the image, it is written directly below the image,
+        not has space like paragraph tag, and figure tag indents the image to
+        the right a bit
+      </figcaption>
+    </figure>
+    <hr />
+    <h3>figure and code tag</h3>
+    <p>
+      figure can be used for text elements to, and figcaption has to be either
+      the first thing or the last thing inside the figure tag
+    </p>
+    <figure>
+      <figcaption>HTML Code Snippet</figcaption>
+      <code>
+        &lt;h1&gt;Hello World! This is damn hard to do with HTML
+        entities.&lt;/h1&gt;
+      </code>
+    </figure>
+
+    <hr>
+
+    <h3>More semantic tags : aside, details, summary, time, mark</h3>
+    <aside>
+      <p>Aside tag can be used inside the article tag to tell that thsee things are not as important as the rest of th article</p>
+      <details>
+        <summary>
+          Guess the <mark>number of hours</mark> i code daily?
+        </summary>
+        <p>
+          I don't! HAHA got you!
+          <br>
+          Nah just joking, i code from <time datetime="08:00">8am</time> in the morning for <time datetime="PT3H">3 hours</time> daily.
+        </p>
+      </details>
+    </aside>
+    <p>
+      div tag was used earlier, it is like section but with no semantic meaning, they are block elements
+      <br>
+      span tag is inline element and is used, but they also do not have semantic meaning, but it is used for css styling
+      <br>
+      avoid using div and span as you learn html, when we know what to use where, and in cases where there are no correct choice of semnatic elements then we use div and span
+    </p>
+    
+    <hr>
+
+    <h3>TABLES</h3>
+    <p>
+      We don't want to use tables to structure our html pages now, that is a thing of the past, use semantic elemts now. Tabel doesn't take the whole space, it expands only that much needed for the content. The RHS is margin filled.
+      <table>
+        <!--automatically spans all the columns-->
+        <caption>My Daily Schedule</caption>
+        <!--thead = table head, tbody = table body-->
+        <thead>
+          <tr>
+            <!--th are center aligned and bold-->
+            <th>&nbsp;</th>
+            <th scope="col">Time</th>
+            <th scope="col">Activity</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <!--instead of directly writing 8am - 11am we are teeling that there are time using semantic elemt of time and datetime attribtue-->
+            <th scope="row">Morning</th>
+            <td><time datetime="08:00">8am</time> - <time datetime="11:00">11am</time></td>
+            <td>Study development</td>
+          </tr>
+          <tr>
+            <th scope="row">Break</th>
+            <td><time datetime="11:00">11am</time> - <time datetime="12:00">11pm</time></td>
+            <td>Eat lunch</td>
+          </tr>
+          <tr>
+            <th scope="row">College</th>
+            <td><time datetime="12:00">8pm</time> - <time datetime="18:00">6pm</time></td>
+            <td>Hate college</td>
+          </tr>
+          <tr>
+            <th scope="row">Evening</th>
+            <td rowspan="2">All other time</td>
+            <td>Free Time</td>
+          </tr>
+          <tr>
+            <th scope="row">Night</th>
+            <td>Sleep</td>
+          </tr>
+          
+        </tbody>
+        <tfoot>
+          <!--can add like if eeverything sums up to this-->
+          <tr>
+            <td colspan="3">And thats what is do everyday of my life</td>
+          </tr>
+        </tfoot>        
+      </table>
+    </p>
+
+    <hr>
+
+    <h3>FORMS</h3>
+    <article id="contactSection">
+      <p>I'd like to hear from you:</p>
+      <form action="https://httpbin.org/get" method="get">
+        <!--putting inside paragraph to get one in each line, using a block element, using div avoiding-->
+        <fieldset>
+          <legend>Personal Information</legend>
+          <p>
+            <label for="firstName">First Name:</label>
+            <!-- autofocus can be only one, it means wehre we can directly start typing without clicking-->
+            <input type="text" name="firstName" id="firstName" placeholder="your name goes here" autofocus autocomplete="on" required>
+          </p>
+          <p>
+            <label for="lastName">Last Name:</label>
+            <input type="text" name="lastName" id="lastName" placeholder="your last name goes here"  autocomplete="on" required>
+          </p>
+        </fieldset>
+        <fieldset>
+          <legend>Security Information:</legend>
+          <p>
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" placeholder="your secret" required>
+          </p>
+        </fieldset>
+        <fieldset>
+          <legend>Masti:</legend>
+          <p>
+            <label for="phone">Phone:</label>
+            <!-- pattern is regex, if it doesn't match, the form wont be submitted-->
+            <input type="tel" name="phone" id="phone" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+          </p>
+          <p>
+            <label for="decade">Favourite decade:</label>
+            <!-- pattern is regex, if it doesn't match, the form wont be submitted-->
+            <input type="number" name="decade" id="decade" min="1950" max="2030" step="10" value="1980">
+          </p>
+          <p>
+            <label for="coffee">Select your coffee:</label>
+            <select name="coffee" id="coffee">
+              <optgroup label="Economical">
+                <option value="regular coffee">Regular Coffee</option>
+                <option value="iced coffee">Iced Coffee</option>
+              </optgroup>
+              <optgroup label="Expensive">
+                <option value="latte" selected>Latte</option>
+                <option value="cappuccino">Cappuccino</option>
+              </optgroup>
+            </select>
+          </p>
+          <p>
+            <label for="coffee2">Select your coffee:</label>
+            <input type="text" name="coffee2" id="coffee2" list="coffee-list">
+            <datalist id="coffee-list">
+              <option value="Regular Coffee">
+              <option value="Iced Coffee">
+              <option value="Latte">
+              <option value="Cappuccino">
+            </datalist>
+          </p>
+        </fieldset>
+        <fieldset>
+          <legend>What do you want to eat?</legend>
+          <!--the name attribute has to be same for all so that only one of them can be selected
+          and here the input comes before the label-->
+          <p>
+            <input type="radio" name="food" id="samosa" value="samosa">
+            <label for="samosa">Samosa</label>
+          </p>
+          <p>
+            <input type="radio" name="food" id="kachori" value="kachori">
+            <label for="kachori">Kachori</label>
+          </p>
+          <p>
+            <input type="radio" name="food" id="poha" value="poha">
+            <label for="poha">Poha</label>
+          </p>
+        </fieldset>
+        <fieldset>
+          <!-- checkboxes we can select as many as we want-->
+          <legend>Lets talk some pet, shall we?</legend>
+          <p>
+            <input type="checkbox" name="pets" id="dog" value="dog">
+            <label for="dog">Dog</label>
+          </p>
+          <p>
+            <input type="checkbox" name="pets" id="cat" value="cat">
+            <label for="cat">Cat</label>
+          </p>
+          <p>
+            <input type="checkbox" name="pets" id="rabbit" value="rabbit">
+            <label for="rabbit">Rabbit</label>
+          </p>
+          <p>
+            <input type="checkbox" name="pets" id="bird" value="bird">
+            <label for="bird">Bird</label>
+          </p>
+        </fieldset>
+        <fieldset>
+          <legend>Send me a note!</legend>
+          <label for="message">Message:</label>
+          <br>
+          <textarea name="message" id="message" cols="30" rows="10" placeholder="Type your message here!"></textarea>
+        </fieldset>
+        <!-- this below is also a way to submit, but using button is more semantic and can do more things -->
+        <!-- <input type="submit" value="SUBMIT"> -->
+        <button type="submit" >Submit</button>
+        <!-- sensitive information is sent by post not get, get shows things in the url -->
+        <button type="submit" formaction="https://httpbin.org/post" formmethod="post">Submit using post</button>
+        <button type="reset">Reset</button>
+      </form>
+    </article>
+
+    <hr>
+
+    <footer>
+      <p>This is the end of the page. there can be multiple footers for the page. The footers can have its own nav area. In case of multiple nav we can make them labeled to know which is which</p>
+    </footer>
+  </body>
+</html>
